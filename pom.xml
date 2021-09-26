@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.rvr.services</groupId>
 	<artifactId>commons</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3</version>
 	<name>commons</name>
 	<description>Commons</description>
 	<properties>
@@ -81,5 +81,6 @@
 			<url>https://maven.pkg.github.com/raphaelvrossi/mvn-repo</url>
 		</repository>
 	</distributionManagement>
+
 
 </project>
