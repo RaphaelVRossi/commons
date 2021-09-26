@@ -25,15 +25,10 @@ jobs:
           distribution: 'adopt'
       
       # Maven bump version
-#       - name: Maven Version Bump Action
-#         uses: nnichols/maven-version-bump-action@v4
-#         with:
-#           github-token: ${{ secrets.GIT_TOKEN }}
-      
-      - name: Maven version
-        uses: JActions/maven-version@v1.0.0
-
-
+      - name: Maven Version Bump Action
+        uses: nnichols/maven-version-bump-action@v4
+        with:
+          github-token: ${{ secrets.GIT_TOKEN }}
       
       # Maven Publish
       - name: Publish package
