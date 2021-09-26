@@ -38,6 +38,10 @@ jobs:
       
       - name: Publish package
         run: echo ${{ steps.bump.outputs.old-version }} ; echo ${{ steps.bump.outputs.version }} ;  echo ${{ steps.bump.outputs.updated }} ; 
+        
+      - name: AAAA
+        if: ${{ steps.bump.outputs.updated }} == 1
+        run: echo 'RUNNNNNN'
       
       # Maven Publish
 #       - name: Publish package
