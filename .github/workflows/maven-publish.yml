@@ -30,9 +30,8 @@ jobs:
 #         with:
 #           github-token: ${{ secrets.GIT_TOKEN }}
       
-      - name: Bump Version
-        id: bump
-        uses: DaveXiong/bump-maven-version@main
+      - name: Bump maven project version
+        uses: DaveXiong/bump-maven-version-action@v1
 
       
       # Maven Publish
