@@ -1,7 +1,7 @@
 # This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
 # For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
 
-name: Maven Package
+name: ActionCI
 
 on:
   push:
@@ -17,23 +17,20 @@ jobs:
     steps:
       # Git checkout
       - uses: actions/checkout@v2
-      
+        
       # Setup Java
       - uses: actions/setup-java@v2
         with:
           java-version: '11'
           distribution: 'adopt'
       
-      - name: Publish package
-        run: echo $GITHUB_ACTOR
-          
       # Maven bump version
       - name: Maven Version Bump Action
         uses: nnichols/maven-version-bump-action@v4
         with:
           github-token: ${{ secrets.GIT_TOKEN }}
-          git-username: ${{ secrets.GIT_USER }}
-          git-email: ${{ secrets.GIT_EMAIL }}
+#           git-username: ${{ secrets.GIT_USER }}
+#           git-email: ${{ secrets.GIT_EMAIL }}
       
       # Maven Publish
 #       - name: Publish package
