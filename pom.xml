@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.rvr.services</groupId>
 	<artifactId>commons</artifactId>
-	<version>0.0.10</version>
+	<version>0.0.11</version>
 	<name>commons</name>
 	<description>Commons</description>
 	<properties>
