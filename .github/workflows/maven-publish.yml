@@ -43,10 +43,10 @@ jobs:
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=RaphaelVRossi_commons
 
       - name: Maven version
-          id: bump
-          uses: raphaelvrossi/action-maven-bump-version@v1.2
-          with:
-            git-token: ${{ secrets.GIT_TOKEN }}
+        id: bump
+        uses: raphaelvrossi/action-maven-bump-version@v1.2
+        with:
+          git-token: ${{ secrets.GIT_TOKEN }}
 
       - name: Publish package
         run: echo ${{ steps.bump.outputs.old-version }} ; echo ${{ steps.bump.outputs.version }} ;  echo ${{ steps.bump.outputs.updated }} ;
