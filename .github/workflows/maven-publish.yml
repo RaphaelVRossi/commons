@@ -31,7 +31,7 @@ jobs:
 #           github-token: ${{ secrets.GIT_TOKEN }}
 
       - name: Maven version
-        uses: raphaelvrossi/action-maven-bump-version@v1.1
+        uses: raphaelvrossi/action-maven-bump-version@v1.2
         with:
           github-token: ${{ secrets.GIT_TOKEN }}
       
