@@ -15,11 +15,20 @@ jobs:
       contents: read
       packages: write 
     steps:
+      # Git checkout
       - uses: actions/checkout@v2
+      
+      # Setup Java
       - uses: actions/setup-java@v2
         with:
           java-version: '11'
           distribution: 'adopt'
+      
+      # Maven bump version
+      - name: Maven Version Bump Action
+        uses: nnichols/maven-version-bump-action@v4
+        
+      # Maven Publish
       - name: Publish package
         run: mvn --batch-mode deploy
         env:
