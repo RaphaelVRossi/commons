@@ -31,9 +31,13 @@ jobs:
 #           github-token: ${{ secrets.GIT_TOKEN }}
 
       - name: Maven version
+        id: bump
         uses: raphaelvrossi/action-maven-bump-version@v1.2
         with:
           git-token: ${{ secrets.GIT_TOKEN }}
+      
+      - name: Publish package
+        run: echo ${{ steps.bump.outputs.old-version }} ; echo ${{ steps.bump.outputs.version }} ;  echo ${{ steps.bump.outputs.updated }} ; 
       
       # Maven Publish
 #       - name: Publish package
